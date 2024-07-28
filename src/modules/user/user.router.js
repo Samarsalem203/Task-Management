@@ -48,7 +48,7 @@ router.put(
   changePass
 );
 // Update
-router.patch("/updateAccount", auth.userAuthentication,updateData);
+router.patch("/updateAccount", auth.userAuthentication,myMulter(validExtension.image).single("image"),updateData);
 
 // Delete
 router.delete(
